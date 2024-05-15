@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-18T12:09:39.068078" rpa="false" schemaversion="5">
+<suite id="s1" name="teste NFL" source="c:\Users\Michael\Desktop\V8.Tech\alura\TesteNFL\testes\teste_NFL.robot">
+<test id="s1-t1" name="Um jogo de 2020 não pode estar visível no ano de 2021" line="108">
+<kw name="Dado que eu acesse a NFL" owner="setup_teardown" type="SETUP">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-18T12:09:39.396525" level="INFO">${HEADERS} = </msg>
+<var>${HEADERS}</var>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-18T12:09:39.396525" elapsed="0.001999"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-18T12:09:39.399524" level="INFO">Opening browser 'Chrome' to base url 'https://www.nfl.com/'.</msg>
+<arg>https://www.nfl.com/</arg>
+<arg>Chrome</arg>
+<arg>options=add_argument("--user-agent=${HEADERS}")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-18T12:09:39.399524" elapsed="4.099072"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-18T12:09:43.499598" elapsed="0.234170"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-18T12:09:43.733768" level="INFO">Clicking element 'id=onetrust-accept-btn-handler'.</msg>
+<arg>id=onetrust-accept-btn-handler</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-18T12:09:43.733768" elapsed="3.336037"/>
+</kw>
+<status status="PASS" start="2024-03-18T12:09:39.394527" elapsed="7.675278"/>
+</kw>
+<kw name="Dado que o usuario verifique o SuperBowl do ano 2021 e do ano 2020" owner="login_e_tarefas">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-18T12:09:47.072803" level="INFO">Clicking element '//a[@title='Scores']'.</msg>
+<arg>//a[@title='Scores']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-18T12:09:47.071803" elapsed="2.321996"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-18T12:09:53.396625" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-18T12:09:49.394798" elapsed="4.001827"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-18T12:09:53.397625" level="INFO">Clicking element '//select[@data-test-id='facemask-select-container']'.</msg>
+<arg>//select[@data-test-id='facemask-select-container']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-18T12:09:53.396625" elapsed="0.094083"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-18T12:09:54.492473" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-18T12:09:53.490708" elapsed="1.001765"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-18T12:09:54.494471" level="INFO">Clicking element '//select[@data-test-id='facemask-select-container']/option[@value='2022']'.</msg>
+<arg>//select[@data-test-id='facemask-select-container']/option[@value='2022']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-18T12:09:54.493472" elapsed="0.206653"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-18T12:09:54.701125" level="INFO">Sending key(s) ('27',) to //select[@data-test-id='facemask-select-container'] element.</msg>
+<msg time="2024-03-18T12:09:55.065838" level="INFO">Sending keys 27</msg>
+<arg>//select[@data-test-id='facemask-select-container']</arg>
+<arg>\27</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-18T12:09:54.700125" elapsed="0.408687"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-18T12:09:58.108873" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-18T12:09:55.108812" elapsed="3.000061"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-18T12:09:58.269773" level="INFO">Element 'Chiefs' did not exist.</msg>
+<arg>Chiefs</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-03-18T12:09:58.109873" elapsed="0.160899"/>
+</kw>
+<status status="PASS" start="2024-03-18T12:09:47.071803" elapsed="11.198969"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-18T12:09:58.272771" elapsed="2.219433"/>
+</kw>
+<status status="PASS" start="2024-03-18T12:09:58.271771" elapsed="2.220433"/>
+</kw>
+<status status="PASS" start="2024-03-18T12:09:39.393527" elapsed="21.099681"/>
+</test>
+<status status="PASS" start="2024-03-18T12:09:39.075074" elapsed="21.421136"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="teste NFL">teste NFL</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
